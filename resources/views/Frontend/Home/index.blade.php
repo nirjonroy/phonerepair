@@ -40,43 +40,31 @@
 <!-- Slider area Start -->
 <section class="slider-area">
     <div class="home-slider owl-carousel owl-theme">
-        <div class="single-slider single-slider-bg-1">
-            <div class="d-table">
-                <div class="d-table-cell">
-                    <div class="container">
-                        <div class="row align-items-center">
-                            <div class="col-lg-12 text-center">
-                                <div class="slider-tittle one">
-                                    <h3> Computor Repair Services </h3>
-                                    <h1>Repair your Computer <br> laptop &amp; Mobile. </h1>
+        @foreach($sliders as $slider)
+            <div class="single-slider single-slider-bg-{{$loop->iteration}}" style="background: url('{{ asset('storage/' . $slider->image) }}')">
+                <div class="d-table">
+                    <div class="d-table-cell">
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-lg-12 text-center">
+                                    <div class="slider-tittle one" >
+                                        <h3 style="color:#000000">{{ $slider->paragraph }}</h3>
+                                        <h1 style="color:#000000">{{ $slider->title }}</h1>
+                                    </div>
+                                    <div class="slider-btn bnt1 text-center">
+                                        <a href="" class="box-btn">Services</a>
+                                        <a href="" class="border-btn">Contact Us</a>
+                                    </div>
                                 </div>
-                                <div class="slider-btn bnt1 text-center"> <a href="services.html" class="box-btn">Services</a> <a href="contact.html" class="border-btn">Contact Us </a> </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="single-slider single-slider-bg-2">
-            <div class="d-table">
-                <div class="d-table-cell">
-                    <div class="container">
-                        <div class="row align-items-center">
-                            <div class="col-lg-12 text-center">
-                                <div class="slider-tittle one">
-                                    <h3> Computor Repair Services </h3>
-                                    <h1>Repair your Computer <br> laptop &amp; Mobile. </h1>
-                                </div>
-                                <div class="slider-btn bnt1 text-center"> <a href="services.html" class="box-btn">Services</a> <a href="contact.html" class="border-btn">Contact Us </a> </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        @endforeach
     </div>
 </section>
-<!-- End Slider End -->
+
 
 <!-- CTA Sec Start -->
 <section class="cta-section">
