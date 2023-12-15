@@ -27,7 +27,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-3 col-lg-3 col-md-5 d-flex align-items-center">
-                    <div class="logo"> <a href="index.html"><img src="{{asset('frontend/images/logo.png')}}" alt=""></a> </div>
+                    <div class="logo"> <a href="index.html">
+                        {{-- <img src="{{asset('frontend/images/logo.png')}}" alt=""></a> --}}
+                        <b>Nirjon Repair Center</b>
+                     </div>
                 </div>
                 <div class="col-xl-9 col-lg-9 col-md-9">
                     <div class="header-right float-right d-none d-lg-block"> <a href="#quote-popup" class="bt-btn btn open-popup-link">Get a Quote</a> </div>
