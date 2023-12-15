@@ -16,3 +16,5 @@
     <script src="{{asset('frontend/js/slick.min.js')}}"></script>
     <!--jquery js -->
     <script src="{{asset('frontend/js/custom.js')}}"></script>
+
+

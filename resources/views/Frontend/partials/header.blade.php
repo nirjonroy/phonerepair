@@ -23,6 +23,11 @@
         </div>
     </div> --}}
     <!-- menu-area -->
+    @php
+    $services = DB::table('service_categories')->get();
+    // dd($services);
+
+    @endphp
     <div class="header-menu-area">
         <div class="container">
             <div class="row">
@@ -39,7 +44,7 @@
                             <ul>
                                 <li class="active"><a href="index.html">Home</a> </li>
                                 <li><a href="about-us.html">About Us</a></li>
-                                <li class="menu-item-has-children"><a href="javascript:void(0)">Pages</a>
+                                {{-- <li class="menu-item-has-children"><a href="javascript:void(0)">Pages</a>
                                     <ul class="submenu">
                                         <li><a href="about-us.html">About Us</a></li>
                                         <li><a href="our-team.html">Our Team</a></li>
@@ -49,11 +54,14 @@
                                         <li><a href="privacy-policy.html">Privacy Policy</a></li>
                                         <li><a href="terms-conditions.html">Terms Conditions</a></li>
                                     </ul>
-                                </li>
+                                </li> --}}
                                 <li class="menu-item-has-children"><a href="javascript:void(0)">Services</a>
                                     <ul class="submenu">
-                                        <li><a href="services.html">Services</a></li>
-                                        <li><a href="service-details.html">Service Details</a></li>
+                                        @foreach ($services as $service)
+                                        <li><a href="services.html">{{$service->name}}</a></li>
+                                    @endforeach
+
+
                                     </ul>
                                 </li>
                                 <li class="menu-item-has-children"><a href="javascript:void(0)">Blog</a>

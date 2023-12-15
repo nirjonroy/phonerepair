@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\frontend\HomeController;
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\SliderController;
+use App\Http\Controllers\Backend\serviceCategoryController;
+use App\Http\Controllers\Backend\serviceController;
 
 
 /*
@@ -35,6 +37,8 @@ Route::get('/', [HomeController::class, 'index'])->name('home.index');
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('Dashboard.index');
     Route::resource('sliders', SliderController::class);
+    Route::resource('service-categories', ServiceCategoryController::class);
+    Route::resource('service', ServiceController::class);
 });
 
 require __DIR__.'/auth.php';

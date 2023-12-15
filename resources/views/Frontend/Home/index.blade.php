@@ -2,6 +2,9 @@
 @section('title', 'Nirjon Phone Repir')
 @push('css')
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
 @endpush
 @section('content')
 
@@ -39,17 +42,17 @@
 </div>
 <!-- Slider area Start -->
 <section class="slider-area">
-    <div class="home-slider owl-carousel owl-theme">
+    <div class="home-slider owl-carousel owl-theme" data-autoplay="true" data-autoplay-speed="5000" data-loop="true">
         @foreach($sliders as $slider)
-            <div class="single-slider single-slider-bg-{{$loop->iteration}}" style="background: url('{{ asset('storage/' . $slider->image) }}')">
+            <div class="single-slider single-slider-bg-{{$loop->iteration}}" style="background: url('{{ asset('storage/' . $slider->image) }}'); background-size: cover; background-position: center;">
                 <div class="d-table">
                     <div class="d-table-cell">
                         <div class="container">
                             <div class="row align-items-center">
                                 <div class="col-lg-12 text-center">
-                                    <div class="slider-tittle one" >
-                                        <h3 style="color:#000000">{{ $slider->paragraph }}</h3>
-                                        <h1 style="color:#000000">{{ $slider->title }}</h1>
+                                    <div class="slider-tittle one" style="color: #000000;">
+                                        <p>{{ $slider->title }}</p>
+                                        <h5>{{ $slider->paragraph }}</h5>
                                     </div>
                                     <div class="slider-btn bnt1 text-center">
                                         <a href="" class="box-btn">Services</a>
@@ -64,6 +67,7 @@
         @endforeach
     </div>
 </section>
+
 
 
 <!-- CTA Sec Start -->
@@ -97,6 +101,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="col-lg-3 col-md-6">
                 <!-- Single Service Sec -->
                 <div class="single-services-sec">
@@ -477,4 +482,15 @@
     </div>
 </section>
 <!-- Blog Sec End -->
+@push('js')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<!-- Initialize Owl Carousel -->
+<script>
+    $(document).ready(function(){
+        $(".owl-carousel").owlCarousel();
+    });
+</script>
+
+@endpush
 @endsection

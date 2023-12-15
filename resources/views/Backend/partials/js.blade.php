@@ -61,3 +61,17 @@
 
 <!--script admin-->
 <script src="{{asset('backend/assets/js/admin-script.js')}}"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+    window.onload = function() {
+        @if(session('success'))
+            Swal.fire({
+                icon: 'success',
+                title: '{{ session('success') }}',
+                showConfirmButton: false,
+                timer: 1500
+            });
+        @endif
+    }
+</script>

@@ -36,5 +36,6 @@
 
     <!-- App css-->
     <link rel="stylesheet" type="text/css" href="{{asset('backend/assets/css/admin.css')}}">
+    
     @stack('css')
 </head>
