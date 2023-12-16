@@ -89,79 +89,22 @@
             <h2>Our <span>Services</span></h2>
         </div> --}}
         <div class="row">
+            @foreach($services as $service)
             <div class="col-lg-3 col-md-6">
                 <!-- Single Service Sec -->
                 <div class="single-services-sec">
                     <div class="services-icon">
-                        <img src="https://picsum.photos/200" class="img-rounded" alt="Cinque Terre" width="290" height="236">
+                        <img src="{{ asset('storage/' . $service->serviceImage) }}" class="img-rounded" alt="Cinque Terre" width="290" height="236">
                     </div>
                     <div class="single-services-content">
-                        <h5>Computer Repair</h5>
-                        <div class="slider-btn bnt1 text-center"> <a href="services.html" class="box-btn">Repair Now</a>  </div>
+                        <h5>{{$service->serviceName}}</h5>
+                        <div class="slider-btn bnt1 text-center"> <a href="{{route('serviceDetails', $service->serviceSlug)}}" class="box-btn">Repair Now</a>  </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="col-lg-3 col-md-6">
-                <!-- Single Service Sec -->
-                <div class="single-services-sec">
-                    <div class="services-icon">
-                        <img src="https://picsum.photos/200" class="img-rounded" alt="Cinque Terre" width="290" height="236">
-                    </div>
-                    <div class="single-services-content">
-                        <h5>Computer Repair</h5>
-                        <div class="slider-btn bnt1 text-center"> <a href="services.html" class="box-btn">Repair Now</a>  </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <!-- Single Service Sec -->
-                <div class="single-services-sec">
-                    <div class="services-icon">
-                        <img src="https://picsum.photos/200" class="img-rounded" alt="Cinque Terre" width="290" height="236">
-                    </div>
-                    <div class="single-services-content">
-                        <h5>Computer Repair</h5>
-                        <div class="slider-btn bnt1 text-center"> <a href="services.html" class="box-btn">Repair Now</a>  </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <!-- Single Service Sec -->
-                <div class="single-services-sec">
-                    <div class="services-icon">
-                        <img src="https://picsum.photos/200" class="img-rounded" alt="Cinque Terre" width="290" height="236">
-                    </div>
-                    <div class="single-services-content">
-                        <h5>Computer Repair</h5>
-                        <div class="slider-btn bnt1 text-center"> <a href="services.html" class="box-btn">Repair Now</a>  </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <!-- Single Service Sec -->
-                <div class="single-services-sec">
-                    <div class="services-icon">
-                        <img src="https://picsum.photos/200" class="img-rounded" alt="Cinque Terre" width="290" height="236">
-                    </div>
-                    <div class="single-services-content">
-                        <h5>Computer Repair</h5>
-                        <div class="slider-btn bnt1 text-center"> <a href="services.html" class="box-btn">Repair Now</a>  </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <!-- Single Service Sec -->
-                <div class="single-services-sec">
-                    <div class="services-icon">
-                        <img src="https://picsum.photos/200" class="img-rounded" alt="Cinque Terre" width="290" height="236">
-                    </div>
-                    <div class="single-services-content">
-                        <h5>Computer Repair</h5>
-                        <div class="slider-btn bnt1 text-center"> <a href="services.html" class="box-btn">Repair Now</a>  </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
+
+
         </div>
     </div>
 </section>

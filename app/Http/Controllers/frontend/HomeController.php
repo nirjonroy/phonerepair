@@ -11,7 +11,8 @@ class HomeController extends Controller
 {
     public function index(){
         $sliders = Slider::where('status', 1)->get();
-        return view('frontend.home.index', compact('sliders'));
+        $services = Service::all();
+        return view('frontend.home.index', compact('sliders', 'services'));
     }
     public function serviceView($slug){
         $service = ServiceCategory::where('slug',$slug)->first();

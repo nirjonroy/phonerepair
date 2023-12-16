@@ -7,6 +7,7 @@ use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\SliderController;
 use App\Http\Controllers\Backend\serviceCategoryController;
 use App\Http\Controllers\Backend\serviceController;
+use App\Http\Controllers\Backend\aboutController;
 
 
 /*
@@ -43,6 +44,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::resource('sliders', SliderController::class);
     Route::resource('service-categories', ServiceCategoryController::class);
     Route::resource('service', serviceController::class);
+    Route::resource('about', aboutController::class);
 });
 
 require __DIR__.'/auth.php';
