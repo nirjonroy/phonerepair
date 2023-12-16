@@ -110,6 +110,7 @@
 
                     <li><a class="sidebar-header" href="{{route('sliders.index')}}"><i data-feather="archive"></i><span>Sliders</span></a>
                     <li><a class="sidebar-header" href="{{route('service-categories.index')}}"><i data-feather="archive"></i><span>Service Category</span></a>
+                    <li><a class="sidebar-header" href="{{route('service.index')}}"><i data-feather="archive"></i><span>Service</span></a>
 
                 </ul>
             </div>

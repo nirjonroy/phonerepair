@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('serviceName')->nullable();
             $table->string('serviceImage')->nullable();
             $table->string('serviceNumber')->nullable();
+            $table->string('serviceSlug')->nullable();
             $table->timestamps();
         });
     }

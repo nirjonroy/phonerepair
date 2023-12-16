@@ -52,10 +52,12 @@
                                     <div class="d-flex">
                                         {{$service->serviceName}}
 
+
                                     </div>
                                 </td>
                                 <td>
-                                    <img src="{{ asset('storage/' . $service->image) }}" alt="sdfa" class="img-fluid " width="50px" height="50px">
+
+                                    <img src="{{ asset('storage/' . $service->serviceImage) }}" alt="sdfa" class="img-fluid " width="50px" height="50px">
                                 </td>
 
                                 <td>

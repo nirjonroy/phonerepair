@@ -28,6 +28,8 @@ Route::get('/', function () {
 });
 
 Route::get('/', [HomeController::class, 'index'])->name('home.index');
+Route::get('serviceView/{slug}', [HomeController::class, 'serviceView'])->name('serviceView');
+Route::get('serviceDetails/{slug}', [HomeController::class, 'serviceDetail'])->name('serviceDetails');
 
 
 
@@ -36,9 +38,11 @@ Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('Dashboard.index');
+
+
     Route::resource('sliders', SliderController::class);
     Route::resource('service-categories', ServiceCategoryController::class);
-    Route::resource('service', ServiceController::class);
+    Route::resource('service', serviceController::class);
 });
 
 require __DIR__.'/auth.php';

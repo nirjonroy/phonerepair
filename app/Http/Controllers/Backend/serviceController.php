@@ -32,10 +32,11 @@ class serviceController extends Controller
 
         $imagePath = $request->file('serviceImage')->store('serviceImage', 'public');
 
-        Slider::create([
+        Service::create([
             'serviceImage' => $imagePath,
             'serviceName' => $request->input('serviceName'),
             'serviceNumber' => $request->input('serviceNumber'),
+            'serviceSlug' => $request->input('serviceSlug'),
 
         ]);
         // dd($dd);

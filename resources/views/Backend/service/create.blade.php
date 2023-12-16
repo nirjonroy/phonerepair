@@ -19,22 +19,32 @@
 
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade active show" id="account" role="tabpanel" aria-labelledby="account-tab">
-                            <form action="{{route('service-categories.store')}}" class="needs-validation user-add" method="post" enctype="multipart/form-data">
+                            <form action="{{route('service.store')}}" class="needs-validation user-add" method="post" enctype="multipart/form-data">
                                 @csrf
-                                <h4>Service Category </h4>
+                                <h4>Service</h4>
                                 <div class="form-group row">
-                                    <label for="validationCustom1" class="col-xl-3 col-md-4"><span>*</span> Name </label>
-                                    <input class="form-control col-xl-8 col-md-7" id="validationCustom1" type="text" required="" name="name">
+                                    <label for="validationCustom0" class="col-xl-3 col-md-4"><span>*</span> Service Imame</label>
+                                    <input class="form-control col-xl-8 col-md-7" id="validationCustom0" type="file" name="serviceImage" required="">
                                 </div>
                                 <div class="form-group row">
-                                    <label for="validationCustom2" class="col-xl-3 col-md-4"><span>*</span> Slug</label>
-                                    <input class="form-control col-xl-8 col-md-7" id="validationCustom2" type="text" required="" name="slug">
+                                    <label for="validationCustom1" class="col-xl-3 col-md-4"><span></span> Service Name</label>
+                                    <input class="form-control col-xl-8 col-md-7" id="validationCustom1" type="text" required="" name="serviceName">
                                 </div>
 
+                                <div class="form-group row">
+                                    <label for="validationCustom2" class="col-xl-3 col-md-4"><span>*</span> Service Phone</label>
+                                    <input class="form-control col-xl-8 col-md-7" id="validationCustom1" type="text" required="" name="serviceNumber">
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="validationCustom2" class="col-xl-3 col-md-4"><span>*</span> Service Slug</label>
+                                    <input class="form-control col-xl-8 col-md-7" id="validationCustom2" type="text" required="" name="serviceSlug">
+                                </div>
 
                                 <div class="pull-right">
-                                    {{-- <button type="button" class="btn btn-primary">Save</button> --}}
+
                                     <input type="submit" value="submit" class="btn btn-primary">
+
                                 </div>
                             </form>
                         </div>
@@ -49,12 +59,10 @@
 <!-- Container-fluid Ends-->
 
 </div>
-
+<!-- Add this script at the end of your Blade file, after including jQuery -->
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
 <script>
     $(document).ready(function () {
-        // Function to generate a slug from the provided string
         function generateSlug(str) {
             return str
                 .toLowerCase()
@@ -62,18 +70,11 @@
                 .replace(/[^\w-]+/g, ''); // Remove non-word characters
         }
 
-        // Event handler for the name input
         $('#validationCustom1').on('input', function () {
-            // Get the value from the name input
             var nameValue = $(this).val();
-
-            // Generate the slug and update the slug input
             $('#validationCustom2').val(generateSlug(nameValue));
         });
     });
 </script>
-
-
-
 
 @endsection

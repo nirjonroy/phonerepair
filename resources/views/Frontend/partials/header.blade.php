@@ -58,7 +58,7 @@
                                 <li class="menu-item-has-children"><a href="javascript:void(0)">Services</a>
                                     <ul class="submenu">
                                         @foreach ($services as $service)
-                                        <li><a href="services.html">{{$service->name}}</a></li>
+                                        <li><a href="{{route('serviceView', $service->slug)}}">{{$service->name}}</a></li>
                                     @endforeach
 
 
