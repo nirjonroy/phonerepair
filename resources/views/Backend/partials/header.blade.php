@@ -111,6 +111,10 @@
                     <li><a class="sidebar-header" href="{{route('sliders.index')}}"><i data-feather="archive"></i><span>Sliders</span></a>
                     <li><a class="sidebar-header" href="{{route('service-categories.index')}}"><i data-feather="archive"></i><span>Service Category</span></a>
                     <li><a class="sidebar-header" href="{{route('service.index')}}"><i data-feather="archive"></i><span>Service</span></a>
+                    <li><a class="sidebar-header" href="{{route('about.index')}}"><i data-feather="archive"></i><span>About</span></a>
+                    <li><a class="sidebar-header" href="{{route('reason.index')}}"><i data-feather="archive"></i><span>Reason</span></a>
+                    <li><a class="sidebar-header" href="{{route('message.index')}}"><i data-feather="archive"></i><span>Message</span></a>
+                    <li><a class="sidebar-header" href="{{route('testimonial.index')}}"><i data-feather="archive"></i><span>Testimonial</span></a>
 
                 </ul>
             </div>

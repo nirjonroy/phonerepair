@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\About;
+use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Facades\Storage;
 
 class aboutController extends Controller
@@ -34,7 +35,7 @@ class aboutController extends Controller
             'description' => $request->input('description'),
 
         ]);
-
+        Alert::success('Success Title', 'Success Message');
         return redirect()->route('about.index')->with('success', 'Slider created successfully');
     }
 
@@ -69,7 +70,7 @@ class aboutController extends Controller
             // Add other fields you want to update as needed
         ]);
 
-        // Redirect the user after the update
+        Alert::success('Success Title', 'Update  Message');
         return redirect()->route('about.edit', $about->id)->with('success', 'About information updated successfully.');
     }
 
@@ -78,6 +79,7 @@ class aboutController extends Controller
     {
         $about->delete();
 
+        Alert::success('Success', 'Service category deleted successfully!');
         return redirect()->route('about.index')
             ->with('success', 'About deleted successfully');
     }

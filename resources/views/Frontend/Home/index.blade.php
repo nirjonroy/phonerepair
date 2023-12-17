@@ -141,33 +141,19 @@
             <h2>WHY  <span>CHOOSE US</span></h2>
         </div>
         <div class="row">
+            @foreach($why_choose as $choose)
             <div class="col-lg-4 col-md-6">
                 <div class="single-feature-sec text-center">
-                    <div class="service-icon"> <i class="icon mbri-mobile"></i> </div>
+                    <div class="service-icon">
+                        <img src="{{ asset('storage/' . $choose->logo) }}" alt="" srcset="" style="width:50px; height:50px; border-radius:50px ">
+                    </div>
                     <div class="service-content">
-                        <h2>Mobile Service</h2>
-                        <p>Lorem ipsum dolor sit amet csectetur adipiscing elit sed do eiusmod tem incididunt</p>
+                        <h2>{{$choose->title}}</h2>
+                        <p>{{$choose->text}}</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-feature-sec text-center">
-                    <div class="service-icon"> <i class="icon mbri-laptop"></i> </div>
-                    <div class="service-content">
-                        <h2>Computer Service</h2>
-                        <p>Lorem ipsum dolor sit amet csectetur adipiscing elit sed do eiusmod tem incididunt</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-feature-sec text-center sst-10">
-                    <div class="service-icon"> <i class="icon mbri-desktop"></i> </div>
-                    <div class="service-content">
-                        <h2>Television Service</h2>
-                        <p>Lorem ipsum dolor sit amet csectetur adipiscing elit sed do eiusmod tem incididunt</p>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>
@@ -180,50 +166,20 @@
             <h2>Client <span>Testimonials</span></h2>
         </div>
         <div class="indurance-testimonial-slider">
+            @foreach($testimonials as $testimonial)
             <div class="single-testimonial-slide">
                 <div class="testimonial-item">
-                    <div class="testimonial-content"> <span>Lorem ipsum dolor sit amet, coning ctetur adipisicing elit, sed do it on eiusmod tempor incididunt me ut labore et dolore.</span> </div>
+                    <div class="testimonial-content"> <span>{{$testimonial->message}}</span> </div>
                     <div class="testimonial-author">
-                        <div class="author-image"> <img src="images/testimonials-img1.png" alt=""> </div>
+                        <div class="author-image"> <img src="{{ asset('storage/' . $testimonial->image) }}" alt="" style="width:50px; height:50px; border-radius:50px"> </div>
                         <div class="author-name">
-                            <h6 class="title">Les Williams</h6>
-                            <span>CEO</span> </div>
+                            <h6 class="title">{{$testimonial->name}}</h6>
+                            <span>{{$testimonial->designation}}</span> </div>
                     </div>
                 </div>
             </div>
-            <div class="single-testimonial-slide">
-                <div class="testimonial-item">
-                    <div class="testimonial-content"> <span>Lorem ipsum dolor sit amet, coning ctetur adipisicing elit, sed do it on eiusmod tempor incididunt me ut labore et dolore.</span> </div>
-                    <div class="testimonial-author">
-                        <div class="author-image"> <img src="images/testimonials-img2.png" alt=""> </div>
-                        <div class="author-name">
-                            <h6 class="title">Jessica Jeni</h6>
-                            <span>CEO</span> </div>
-                    </div>
-                </div>
-            </div>
-            <div class="single-testimonial-slide">
-                <div class="testimonial-item">
-                    <div class="testimonial-content"> <span>Lorem ipsum dolor sit amet, coning ctetur adipisicing elit, sed do it on eiusmod tempor incididunt me ut labore et dolore.</span> </div>
-                    <div class="testimonial-author">
-                        <div class="author-image"> <img src="images/testimonials-img3.png" alt=""> </div>
-                        <div class="author-name">
-                            <h6 class="title">Jeni Blake</h6>
-                            <span>CEO</span> </div>
-                    </div>
-                </div>
-            </div>
-            <div class="single-testimonial-slide">
-                <div class="testimonial-item">
-                    <div class="testimonial-content"> <span>Lorem ipsum dolor sit amet, coning ctetur adipisicing elit, sed do it on eiusmod tempor incididunt me ut labore et dolore.</span> </div>
-                    <div class="testimonial-author">
-                        <div class="author-image"> <img src="images/testimonials-img2.png" alt=""> </div>
-                        <div class="author-name">
-                            <h6 class="title">Halim Dawn</h6>
-                            <span>CEO</span> </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
+
         </div>
     </div>
 </section>

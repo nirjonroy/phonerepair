@@ -8,13 +8,17 @@ use App\Models\Slider;
 use App\Models\ServiceCategory;
 use App\Models\Service;
 use App\Models\About;
+use App\Models\Reason;
+use App\Models\Testimonial;
 class HomeController extends Controller
 {
     public function index(){
         $sliders = Slider::where('status', 1)->get();
         $services = Service::all();
         $about = About::first();
-        return view('frontend.home.index', compact('sliders', 'services', 'about'));
+        $why_choose = Reason::all();
+        $testimonials = Testimonial::all();
+        return view('frontend.home.index', compact('sliders', 'services', 'about', 'why_choose', 'testimonials'));
     }
     public function serviceView($slug){
         $service = ServiceCategory::where('slug',$slug)->first();
@@ -33,5 +37,5 @@ class HomeController extends Controller
         return view('frontend.home.about_page', compact('about'));
     }
 
-    
+
 }

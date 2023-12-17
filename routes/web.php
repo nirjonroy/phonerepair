@@ -10,6 +10,7 @@ use App\Http\Controllers\Backend\serviceController;
 use App\Http\Controllers\Backend\aboutController;
 use App\Http\Controllers\Backend\resonController;
 use App\Http\Controllers\Backend\messageController;
+use App\Http\Controllers\Backend\testimonialController;
 
 
 /*
@@ -48,6 +49,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::resource('about', aboutController::class);
     Route::resource('reason', resonController::class);
     Route::resource('message', messageController::class);
+    Route::resource('testimonial', testimonialController::class);
 });
 
 require __DIR__.'/auth.php';
