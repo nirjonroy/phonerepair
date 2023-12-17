@@ -15,10 +15,10 @@ return new class extends Migration
     {
         Schema::create('reasons', function (Blueprint $table) {
             $table->id();
-            $table->string('logo');
-            $table->string('title');
-            $table->string('text');
-            $table->bigInteger('status');
+            $table->string('logo')->nullable();
+            $table->string('title')->nullable();
+            $table->string('text')->nullable();
+            $table->bigInteger('status')->nullable();
             $table->timestamps();
         });
     }

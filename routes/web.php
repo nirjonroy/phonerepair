@@ -8,6 +8,7 @@ use App\Http\Controllers\Backend\SliderController;
 use App\Http\Controllers\Backend\serviceCategoryController;
 use App\Http\Controllers\Backend\serviceController;
 use App\Http\Controllers\Backend\aboutController;
+use App\Http\Controllers\Backend\resonController;
 
 
 /*
@@ -46,6 +47,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::resource('service-categories', ServiceCategoryController::class);
     Route::resource('service', serviceController::class);
     Route::resource('about', aboutController::class);
+    Route::resource('reason', resonController::class);
 });
 
 require __DIR__.'/auth.php';
