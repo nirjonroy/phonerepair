@@ -116,26 +116,14 @@
 
             <div class="col-sm-12 col-md-12 col-lg-6">
                 <div class="about-txt">
-                    <h3>Work With Our Teams</h3>
-                    <p>Mauris mattis auctor cursus. Phasellus tellus tellus, imperdiet ut imperdiet eu, iaculis a sem. Donec vehicula luctus nunc in laoreet. Aliquam erat volutpat. Suspendisse vulputate porttitor condimentum. Proin viverra orci a leo
-                        suscipit placerat. Sed feugiat posuere semper. Cras vitae mi erat</p>
-                    <ul class="list-style-one mt-4">
-                        <li>Computer Repair</li>
-                        <li>Data Recovery</li>
-                        <li>Hardware Update</li>
-                        <li>Electronics Repair</li>
-                        <li>Mac Repair</li>
-                        <li>Efficient Cost</li>
-                        <li>Best Materials</li>
-                        <li>Quality Support</li>
-                    </ul>
-                    <a href="about-us.html" class="btn mt-3">Read More</a>
+                    {!!$about->description!!}
+                    <a href="{{route('aboutPage')}}" class="btn mt-3">Read More</a>
                 </div>
             </div>
 
             <div class="col-sm-12 col-md-12 col-lg-6">
                 <div class="about-img">
-                    <img src="{{asset('frontend/images/about-img.jpg')}}" class="img-fluid" alt="">
+                    <img src="{{ asset('storage/' . $about->image) }}" class="img-fluid" alt="">
                 </div>
             </div>
 
@@ -143,6 +131,8 @@
     </div>
 </section>
 <!-- About Area area End -->
+
+
 
 <!-- Service area Start -->
 <section class="feature-area">

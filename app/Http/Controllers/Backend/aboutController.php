@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\About;
+use Illuminate\Support\Facades\Storage;
 
 class aboutController extends Controller
 {
@@ -30,19 +31,55 @@ class aboutController extends Controller
 
         About::create([
             'image' => $imagePath,
-            'description' => $request->input('title'),
+            'description' => $request->input('description'),
 
         ]);
 
         return redirect()->route('about.index')->with('success', 'Slider created successfully');
     }
 
+
+    public function edit(About $about)
+    {
+        return view('backend.about.edit', compact('about'));
+    }
+
+    public function update(Request $request, About $about)
+{
+    $request->validate([
+        'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+        'description' => 'nullable',
+    ]);
+
+    if ($request->hasFile('image')) {
+        // Delete old image
+        Storage::disk('public')->delete($about->image);
+
+        // Upload new image
+        $imagePath = $request->file('image')->store('about_us', 'public');
+    } else {
+        // Keep existing image
+        $imagePath = $about->image;
+    }
+
+    // Update the model with new information
+    $about->update([
+        'image' => $imagePath,
+        'description' => $request->input('description'),
+        // Add other fields you want to update as needed
+    ]);
+
+    // Redirect the user after the update
+    return redirect()->route('about.edit', $about->id)->with('success', 'About information updated successfully.');
+}
+
+
     public function destroy(about $about)
     {
         $about->delete();
 
         return redirect()->route('about.index')
-            ->with('success', 'Slider deleted successfully');
+            ->with('success', 'About deleted successfully');
     }
 
 }

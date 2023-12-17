@@ -31,6 +31,7 @@ Route::get('/', function () {
 Route::get('/', [HomeController::class, 'index'])->name('home.index');
 Route::get('serviceView/{slug}', [HomeController::class, 'serviceView'])->name('serviceView');
 Route::get('serviceDetails/{slug}', [HomeController::class, 'serviceDetail'])->name('serviceDetails');
+Route::get('about-us', [HomeController::class, 'aboutPage'])->name('aboutPage');
 
 
 

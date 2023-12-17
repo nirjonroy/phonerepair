@@ -7,12 +7,14 @@ use Illuminate\Http\Request;
 use App\Models\Slider;
 use App\Models\ServiceCategory;
 use App\Models\Service;
+use App\Models\About;
 class HomeController extends Controller
 {
     public function index(){
         $sliders = Slider::where('status', 1)->get();
         $services = Service::all();
-        return view('frontend.home.index', compact('sliders', 'services'));
+        $about = About::first();
+        return view('frontend.home.index', compact('sliders', 'services', 'about'));
     }
     public function serviceView($slug){
         $service = ServiceCategory::where('slug',$slug)->first();
@@ -26,4 +28,10 @@ class HomeController extends Controller
         // dd($service);
         return view('frontend.home.serviceDetail', compact('services'));
     }
+    public function aboutPage(){
+        $about = About::first();
+        return view('frontend.home.about_page', compact('about'));
+    }
+
+    
 }
