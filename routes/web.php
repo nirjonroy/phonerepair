@@ -9,6 +9,7 @@ use App\Http\Controllers\Backend\serviceCategoryController;
 use App\Http\Controllers\Backend\serviceController;
 use App\Http\Controllers\Backend\aboutController;
 use App\Http\Controllers\Backend\resonController;
+use App\Http\Controllers\Backend\messageController;
 
 
 /*
@@ -41,13 +42,12 @@ Route::get('about-us', [HomeController::class, 'aboutPage'])->name('aboutPage');
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('Dashboard.index');
-
-
     Route::resource('sliders', SliderController::class);
     Route::resource('service-categories', ServiceCategoryController::class);
     Route::resource('service', serviceController::class);
     Route::resource('about', aboutController::class);
     Route::resource('reason', resonController::class);
+    Route::resource('message', messageController::class);
 });
 
 require __DIR__.'/auth.php';
