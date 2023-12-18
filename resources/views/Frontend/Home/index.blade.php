@@ -4,7 +4,9 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-
+.owl-next{
+    background: #ffffff;
+}
 @endpush
 @section('content')
 
@@ -42,7 +44,7 @@
 </div>
 <!-- Slider area Start -->
 <section class="slider-area">
-    <div class="home-slider owl-carousel owl-theme" data-autoplay="true" data-autoplay-speed="5000" data-loop="true">
+    <div class="home-slider owl-carousel owl-theme" data-autoplay="true" data-autoplay-speed="1000" data-loop="true">
         @foreach($sliders as $slider)
             <div class="single-slider single-slider-bg-{{$loop->iteration}}" style="background: url('{{ asset('storage/' . $slider->image) }}'); background-size: cover; background-position: center;">
                 <div class="d-table">

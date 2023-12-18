@@ -63,7 +63,7 @@
                 <div class="col-12">
                     <div class="copyright-content">
                         <!-- Copyright Text -->
-                        <p>&copy; <span id="year"></span> Repair4u. Designed By sbtechnosoft</p>
+                        <p>&copy; <span id="year"></span> Nirjon . Designed By Nirjon Roy</p>
                     </div>
                 </div>
             </div>

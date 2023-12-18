@@ -46,7 +46,7 @@
       <div class="text-container">
         <div class="text">{{$services->serviceName}}</div>
         <div class="text">{{$services->serviceNumber}}</div>
-        <a class="btn btn-danger">Book Appoinment Now</a>
+        <a href="{{route('contact.us')}}" class="btn btn-danger">Book Appoinment Now</a>
 
       </div>
     </div>
