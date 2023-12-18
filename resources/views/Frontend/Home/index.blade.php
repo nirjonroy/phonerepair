@@ -185,7 +185,7 @@
 </section>
 <!-- Teatimonials Sec End -->
 <!-- Our Team Sec Start -->
-<section class="our-team-sec">
+{{-- <section class="our-team-sec">
     <div class="container">
         <div class="sec-title mb-0">
             <h2>Our <span>Team</span></h2>
@@ -257,35 +257,67 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 <!-- Our Team Sec End -->
 <!-- Pricing Table Sec Start -->
 <section class="pricing-sec">
     <div class="container">
         <div class="sec-title mb-0">
-            <h2>Pricing <span>Table</span></h2>
+            <h2>Get <span>in Touch</span></h2>
         </div>
         <div class="row">
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-9 col-md-6">
                 <!-- Single Pricing Table Sec -->
                 <div class="single-ticket">
                     <div class="inner-box">
-                        <div class="plan-header">
-                            <h2 class="plan-price">$30</h2>
-                            <div class="plan-duration">regular pass</div>
-                        </div>
-                        <ul class="plan-stats">
-                            <li>18000 visits per month</li>
-                            <li>Free installation </li>
-                            <li>All Operating Supported</li>
-                            <li>Unlimited Email Addresses</li>
-                            <li>24/7 Support</li>
-                        </ul>
-                        <a href="javascript:void(0)" class="btn">Buy Now</a>
+                        <form action="{{route('submit.contact')}}" method="post">
+                            @csrf
+                            <div class="container">
+                             <div class="row">
+
+                                <div class="col-md-6">
+                                <label for="name"><b>Name</b></label>
+                                <input type="text" placeholder="Enter name" name="name" id="" required class="form-control">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="name"><b>E-mail</b></label>
+                                    <input type="email" placeholder="Enter Email" name="email" id="" required class="form-control">
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="name"><b>Phone</b></label>
+                                    <input type="number" placeholder="Enter Phone" name="phone" id="" required class="form-control">
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="name"><b>Address</b></label>
+                                    <input type="text" placeholder="Enter Address" name="address" id="" required class="form-control">
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="name"><b>Subject</b></label>
+                                    <input type="text" placeholder="Enter Subject" name="subject" id="" required class="form-control">
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="name"><b>Message</b></label>
+                                    <textarea name="message" id="" cols="100" rows="10"></textarea>
+                                </div>
+                                <div class="col-md-12"></div>
+
+
+
+
+                                <div class="float-right">
+                                    <input type="submit" value="submit" class="btn btn-success">
+                                    
+                                </div>
+
+                              </div>
+                             </div>
+
+                          </form>
+
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-3 col-md-6">
                 <!-- Single Pricing Table Sec -->
                 <div class="single-ticket">
                     <div class="inner-box">
@@ -304,25 +336,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-                <!-- Single Pricing Table Sec -->
-                <div class="single-ticket">
-                    <div class="inner-box">
-                        <div class="plan-header">
-                            <h2 class="plan-price">$99</h2>
-                            <div class="plan-duration">regular pass</div>
-                        </div>
-                        <ul class="plan-stats">
-                            <li>18000 visits per month</li>
-                            <li>Free installation </li>
-                            <li>All Operating Supported</li>
-                            <li>Unlimited Email Addresses</li>
-                            <li>24/7 Support</li>
-                        </ul>
-                        <a href="javascript:void(0)" class="btn">Buy Now</a>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>
 </section>

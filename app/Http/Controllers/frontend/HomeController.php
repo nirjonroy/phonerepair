@@ -10,6 +10,8 @@ use App\Models\Service;
 use App\Models\About;
 use App\Models\Reason;
 use App\Models\Testimonial;
+use App\Models\Message;
+use RealRashid\SweetAlert\Facades\Alert;
 class HomeController extends Controller
 {
     public function index(){
@@ -35,6 +37,24 @@ class HomeController extends Controller
     public function aboutPage(){
         $about = About::first();
         return view('frontend.home.about_page', compact('about'));
+    }
+
+    public function submit_contact(Request $request){
+        // dd($request->all());
+        $request->validate([
+            'name' => '',
+            'email' => '',
+            'phone' => '',
+            'address' => '',
+            'subject' => '',
+            'message' => '',
+        ]);
+
+        Message::create($request->all());
+        // dd($dd);
+        Alert::success('Success ', 'Message sent succesfullay');
+
+        return redirect()->back();
     }
 
 
