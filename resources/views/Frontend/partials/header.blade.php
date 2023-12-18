@@ -28,13 +28,13 @@
     // dd($services);
 
     @endphp
-    <div class="header-menu-area">
+    <div class="header-menu-area" style="background: #000000;">
         <div class="container">
             <div class="row">
                 <div class="col-xl-3 col-lg-3 col-md-5 d-flex align-items-center">
-                    <div class="logo"> <a href="index.html">
+                    <div class="logo"> <a href="{{route('home.index')}}">
                         {{-- <img src="{{asset('frontend/images/logo.png')}}" alt=""></a> --}}
-                        <b>Nirjon Repair Center</b>
+                        <b style="color:#ffffff">Nirjon Repair Center</b>
                      </div>
                 </div>
                 <div class="col-xl-9 col-lg-9 col-md-9">
@@ -42,8 +42,8 @@
                     <div class="header__menu float-right">
                         <nav id="mobile-menu">
                             <ul>
-                                <li class="active"><a href="index.html">Home</a> </li>
-                                <li><a href="about-us.html">About Us</a></li>
+                                <li class="active"><a href="{{route('home.index')}}">Home</a> </li>
+                                <li><a href="{{route('aboutPage')}}">About Us</a></li>
                                 {{-- <li class="menu-item-has-children"><a href="javascript:void(0)">Pages</a>
                                     <ul class="submenu">
                                         <li><a href="about-us.html">About Us</a></li>
@@ -64,13 +64,8 @@
 
                                     </ul>
                                 </li>
-                                <li class="menu-item-has-children"><a href="javascript:void(0)">Blog</a>
-                                    <ul class="submenu">
-                                        <li><a href="blog.html">Blog</a></li>
-                                        <li><a href="blog-details.html">Blog Details</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="contact.html">Contact</a></li>
+
+                                <li><a href="{{route('contact.us')}}">Contact</a></li>
                             </ul>
                         </nav>
                     </div>

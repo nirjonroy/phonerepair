@@ -35,6 +35,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home.index');
 Route::get('serviceView/{slug}', [HomeController::class, 'serviceView'])->name('serviceView');
 Route::get('serviceDetails/{slug}', [HomeController::class, 'serviceDetail'])->name('serviceDetails');
 Route::get('about-us', [HomeController::class, 'aboutPage'])->name('aboutPage');
+Route::get('contact-us', [HomeController::class, 'Contact'])->name('contact.us');
 Route::post('contact-form', [HomeController::class, 'submit_contact'])->name('submit.contact');
 
 

@@ -33,7 +33,7 @@
                         {{-- <a href="{{route('about.create')}}" class="btn btn-success float-right">Create</a> --}}
                     </div>
                     <div class="card-body order-datatable">
-                        <table class="display" id="basic-1">
+                        <table class="display table table-borderd" id="basic-1">
                             <thead>
                             <tr>
                                 <th>SL</th>
@@ -49,7 +49,7 @@
                                 <td> {{$key + 1}} </td>
                                 <td>
                                     <div class="d-flex">
-                                        <img src="{{ asset('storage/' . $about->image) }}" alt="sdfa" class="img-fluid " width="50px" height="50px">
+                                        <img src="{{ asset('storage/' . $about->image) }}" alt="sdfa" class="img-fluid " width="200px" height="auto">
 
                                     </div>
                                 </td>

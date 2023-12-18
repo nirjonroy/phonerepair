@@ -29,11 +29,11 @@
             <div class="col-sm-12">
                 <div class="card">
                     <div class="card-header">
-                        <h5>Manage Slider</h5>
+                        <h5>Manage Service Category</h5>
                         <a href="{{route('service-categories.create')}}" class="btn btn-success float-right">Create</a>
                     </div>
                     <div class="card-body order-datatable">
-                        <table class="display" id="basic-1">
+                        <table class="display table table-borderd" id="basic-1">
                             <thead>
                             <tr>
                                 <th>SL</th>

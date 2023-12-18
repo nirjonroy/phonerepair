@@ -401,7 +401,7 @@ header.sticky .header-right {
 }
 
 .header__menu ul li.active a {
-    color: #064273;
+    color: #f30808;
 }
 
 .header__menu.menu-dark ul li:first-child {
@@ -409,7 +409,7 @@ header.sticky .header-right {
 }
 
 .header__menu ul li a {
-    color: #2d2d2d;
+    color: #ffffff;
     font-weight: 500;
     padding: 40px 0;
     display: block;
@@ -453,7 +453,7 @@ header.sticky .header-right {
 }
 
 .header__menu ul li:hover>a {
-    color: #223645;
+    color: #f30808;
 }
 
 .header__menu.menu-dark ul li a:hover {
@@ -462,7 +462,7 @@ header.sticky .header-right {
 
 .header__menu ul li ul.submenu {
     position: absolute;
-    background: #ffffff;
+    background: #000000;
     width: 250px;
     top: 110%;
     left: 0;
@@ -474,7 +474,7 @@ header.sticky .header-right {
     -ms-transition: all 0.3s ease-out 0s;
     -o-transition: all 0.3s ease-out 0s;
     transition: all 0.3s ease-out 0s;
-    border-top: 5px solid #7fc540;
+    border-top: 5px solid #d31c1c;
     box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.05);
     z-index: 99;
     text-align: left;
@@ -517,7 +517,7 @@ header.sticky .header-right {
 }
 
 .header__menu ul li ul.submenu li:hover>a {
-    color: #223645;
+    color: #f6f8f9;
 }
 
 .header-social-icons {}
@@ -2863,7 +2863,7 @@ input.main-search-input:-ms-input-placeholder {
 
 .footer {
     background: rgb(6, 66, 115);
-    background: linear-gradient(90deg, rgba(6, 66, 115, 1) 0%, rgba(13, 55, 89, 1) 35%, rgba(14, 112, 193, 1) 100%);
+    background: black;
     float: left;
     width: 100%;
 }

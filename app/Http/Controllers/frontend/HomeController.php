@@ -57,5 +57,7 @@ class HomeController extends Controller
         return redirect()->back();
     }
 
-
+    public function Contact(){
+        return view('Frontend.Home.contact');
+    }
 }

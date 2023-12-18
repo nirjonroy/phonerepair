@@ -32,14 +32,14 @@
                                     <input class="form-control col-xl-8 col-md-7" id="validationCustom1" type="text" required="" name="title">
                                 </div>
                                 <div class="form-group row">
-                                    <label for="validationCustom2" class="col-xl-3 col-md-4"><span>*</span> Paragraph</label>
-                                    <textarea class="form-control col-xl-8 col-md-7" name="paragraph"></textarea>
+                                        <label for="validationCustom2" class="col-xl-3 col-md-4"><span>*</span> Paragraph</label>
+                                        <textarea class="form-control col-xl-8 col-md-7" name="paragraph"></textarea>
 
-                                </div>
-                                <div class="pull-right">
-                                    {{-- <button type="button" class="btn btn-primary">Save</button> --}}
-                                    <input type="submit" value="submit" class="btn btn-primary">
-                                </div>
+                                    </div>
+                                    <div class="pull-right">
+                                        {{-- <button type="button" class="btn btn-primary">Save</button> --}}
+                                        <input type="submit" value="submit" class="btn btn-primary">
+                                    </div>
                             </form>
                         </div>
 

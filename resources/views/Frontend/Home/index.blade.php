@@ -266,7 +266,7 @@
             <h2>Get <span>in Touch</span></h2>
         </div>
         <div class="row">
-            <div class="col-lg-9 col-md-6">
+            <div class="col-lg-12 col-md-12">
                 <!-- Single Pricing Table Sec -->
                 <div class="single-ticket">
                     <div class="inner-box">
@@ -306,7 +306,7 @@
 
                                 <div class="float-right">
                                     <input type="submit" value="submit" class="btn btn-success">
-                                    
+
                                 </div>
 
                               </div>
@@ -317,74 +317,14 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
-                <!-- Single Pricing Table Sec -->
-                <div class="single-ticket">
-                    <div class="inner-box">
-                        <div class="plan-header">
-                            <h2 class="plan-price">$60</h2>
-                            <div class="plan-duration">regular pass</div>
-                        </div>
-                        <ul class="plan-stats">
-                            <li>18000 visits per month</li>
-                            <li>Free installation </li>
-                            <li>All Operating Supported</li>
-                            <li>Unlimited Email Addresses</li>
-                            <li>24/7 Support</li>
-                        </ul>
-                        <a href="javascript:void(0)" class="btn">Buy Now</a>
-                    </div>
-                </div>
-            </div>
+
 
         </div>
     </div>
 </section>
 <!-- Pricing Table Sec End -->
-<!-- Blog Sec Start -->
-<section class="blog-sec">
-    <div class="container">
-        <div class="sec-title mb-0">
-            <h2>Our <span>Blog</span></h2>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 col-md-6">
-                <!-- Single Blog Sec -->
-                <div class="single-blog-post">
-                    <div class="post-image"> <a href="javascript:void(0)"> <img src="images/blog-img1.jpg" alt="" title=""> </a> </div>
-                    <div class="post-content">
-                        <div class="date"> <i class="fa fa-calendar"></i> <span>19 Jul 2020</span> </div>
-                        <h3> <a href="blog-details.html">Why do we use it?</a> </h3>
-                        <p>Lorem ipsum dolor sit amet csectetur adipiscing elit sed do eiusmod tem incididunt</p>
-                        <a href="blog-details.html" class="btn">Read More</a> </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <!-- Single Blog Sec -->
-                <div class="single-blog-post">
-                    <div class="post-image"> <a href="blog-details.html"> <img src="images/blog-img2.jpg" alt="" title=""> </a> </div>
-                    <div class="post-content">
-                        <div class="date"> <i class="fa fa-calendar"></i> <span>19 Jul 2020</span> </div>
-                        <h3> <a href="blog-details.html">What is Lorem Ipsum?</a> </h3>
-                        <p>Lorem ipsum dolor sit amet csectetur adipiscing elit sed do eiusmod tem incididunt</p>
-                        <a href="blog-details.html" class="btn">Read More</a> </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <!-- Single Blog Sec -->
-                <div class="single-blog-post">
-                    <div class="post-image"> <a href="blog-details.html"> <img src="images/blog-img3.jpg" alt="" title=""> </a> </div>
-                    <div class="post-content">
-                        <div class="date"> <i class="fa fa-calendar"></i> <span>19 Jul 2020</span> </div>
-                        <h3> <a href="blog-details.html">Where does it come from?</a> </h3>
-                        <p>Lorem ipsum dolor sit amet csectetur adipiscing elit sed do eiusmod tem incididunt</p>
-                        <a href="blog-details.html" class="btn">Read More</a> </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Blog Sec End -->
+
+
 @push('js')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 

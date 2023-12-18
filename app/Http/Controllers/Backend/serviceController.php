@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 use App\Models\Service;
+use App\Models\ServiceCategory;
 
 class serviceController extends Controller
 {

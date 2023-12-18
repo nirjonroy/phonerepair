@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Reason;
 use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alert;
 class resonController extends Controller
 {
     /**
@@ -55,7 +56,7 @@ class resonController extends Controller
 
         ]);
 
-
+        Alert::success('Success ', 'Added Successfully');
         return redirect()->route('reason.index')->with('success', 'Slider created successfully');
     }
 

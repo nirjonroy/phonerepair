@@ -29,7 +29,7 @@ class serviceCategoryController extends Controller
 
         ]);
 
-      ServiceCategory::create($request->all());
+        ServiceCategory::create($request->all());
         // dd($dd);
         Alert::success('Success Title', 'Success Message');
 

@@ -25,49 +25,21 @@
                     </div>
                     <!--/ End Footer About -->
                 </div>
-                <div class="col-lg-2 col-md-6 col-12">
+                <div class="col-lg-6 col-md-6 col-12">
                     <!-- Footer Links -->
                     <div class="single-widget f-link widget">
                         <h3 class="widget-title">Company</h3>
                         <ul>
-                            <li><a href="about-us.html">About Us</a></li>
-                            <li><a href="services.html">Our Services</a></li>
-                            <li><a href="gallery.html">Gallery</a></li>
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="contact-us.html">Contact us</a></li>
+                            <li><a href="{{route('aboutPage')}}">About Us</a></li>
+                            <li><a href="">Our Services</a></li>
+                            <li><a href="">Gallery</a></li>
+
+                            <li><a href="{{route('contact.us')}}">Contact us</a></li>
                         </ul>
                     </div>
                     <!--/ End Footer Links -->
                 </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <!-- Footer News -->
-                    <div class="single-widget footer-news widget">
-                        <h3 class="widget-title">Blog Page</h3>
-                        <!-- Single News -->
-                        <div class="single-f-news">
-                            <div class="post-thumb"><a href="javascript:void(0)"><img src="images/blog-img1.jpg" alt=""></a></div>
-                            <div class="content">
-                                <p class="post-meta">
-                                    <span class="post-date"><i class="fa fa-clock-o"></i>April 15, 2020</span>
-                                </p>
-                                <h4 class="title"><a href="blog-details.html">We Provide you Best &amp; Computor Repair Service</a></h4>
-                            </div>
-                        </div>
-                        <!--/ End Single News -->
-                        <!-- Single News -->
-                        <div class="single-f-news">
-                            <div class="post-thumb"><a href="javascript:void(0)"><img src="images/blog-img2.jpg" alt=""></a></div>
-                            <div class="content">
-                                <p class="post-meta">
-                                    <span class="post-date"><i class="fa fa-clock-o"></i>April 10, 2020</span>
-                                </p>
-                                <h4 class="title"><a href="blog-details.html">We Provide you Best &amp; Mobile Repair Service</a></h4>
-                            </div>
-                        </div>
-                        <!--/ End Single News -->
-                    </div>
-                    <!--/ End Footer News -->
-                </div>
+
                 <div class="col-lg-3 col-md-6 col-12">
                     <!-- Footer Contact -->
                     <div class="single-widget footer_contact widget">

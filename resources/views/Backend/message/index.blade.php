@@ -59,14 +59,7 @@
                                     {{$message->phone}}
                                 </td>
                                 <td>
-                                    {{-- <a href="{{ route('message.show', $message->id) }}" class="btn btn-warning">Show</a> --}}
-                                    {{-- <a href="{{ route('about.destroy', $reason->id) }}" class="btn btn-danger" onclick="event.preventDefault(); document.getElementById('delete-form-{{$key}}').submit();">Delete</a> --}}
-
-                                    <!-- Add a form for the delete action -->
-                                    <form id="delete-form-{{$key}}" action="{{ route('reason.destroy', $message->id) }}" method="POST" style="display: none;">
-                                        @csrf
-                                        @method('DELETE')
-                                    </form>
+                                   
 
                                 </td>
                             </tr>

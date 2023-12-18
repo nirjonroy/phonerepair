@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Slider;
+use RealRashid\SweetAlert\Facades\Alert;
 class SliderController extends Controller
 {
     public function index()
@@ -35,7 +36,7 @@ class SliderController extends Controller
             'paragraph' => $request->input('paragraph'),
             'status' => $request->input('status', 1),
         ]);
-
+        Alert::success('Success ', 'Slider Added succesfullay');
         return redirect()->route('sliders.index')->with('success', 'Slider created successfully');
     }
 
@@ -75,7 +76,7 @@ class SliderController extends Controller
         'paragraph' => $request->input('paragraph'),
         'status' => $request->input('status', 1),
     ]);
-
+    Alert::success('Success ', 'Slider Updated succesfullay');
     return redirect()->route('sliders.index')->with('success', 'Slider updated successfully');
 }
 

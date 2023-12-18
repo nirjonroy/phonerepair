@@ -23,51 +23,14 @@
                             </div>
                         </form>
                     </li>
-                    <li class="onhover-dropdown"><a class="txt-dark" href="#">
-                        <h6>EN</h6></a>
-                        <ul class="language-dropdown onhover-show-div p-20">
-                            <li><a href="#" data-lng="pt"><i class="flag-icon flag-icon-uy"></i> Portuguese</a></li>
-                            <li><a href="#" data-lng="es"><i class="flag-icon flag-icon-um"></i> Spanish</a></li>
-                            <li><a href="#" data-lng="en"><i class="flag-icon flag-icon-is"></i> English</a></li>
-                            <li><a href="#" data-lng="fr"><i class="flag-icon flag-icon-nz"></i> French</a></li>
-                        </ul>
-                    </li>
+
                     <li><a class="text-dark" href="#!" onclick="javascript:toggleFullScreen()"><i data-feather="maximize"></i></a></li>
-                    <li class="onhover-dropdown"><i data-feather="bell"></i><span class="badge badge-pill badge-primary pull-right notification-badge">3</span><span class="dot"></span>
-                        <ul class="notification-dropdown onhover-show-div p-0">
-                            <li>
-                                <div class="media">
-                                    <div class="notification-icons bg-success mr-3"><i data-feather="thumbs-up"></i></div>
-                                    <div class="media-body">
-                                        <h6 class="font-success">Someone Likes Your Posts</h6>
-                                        <p class="mb-0"> 2 Hours Ago</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="media">
-                                    <div class="notification-icons bg-info mr-3"><i data-feather="message-circle"></i></div>
-                                    <div class="media-body">
-                                        <h6 class="font-info">3 New Comments</h6>
-                                        <p class="mb-0"> 1 Hours Ago</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="media">
-                                    <div class="notification-icons bg-secondary mr-3"><i data-feather="download"></i></div>
-                                    <div class="media-body">
-                                        <h6 class="font-secondary">Download Complete</h6>
-                                        <p class="mb-0"> 3 Days Ago</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="bg-light txt-dark"><a href="#" data-original-title="" title="">All </a> notification</li>
-                        </ul>
-                    </li>
+
                     <li><a href="#"><i class="right_side_toggle" data-feather="message-square"></i><span class="dot"></span></a></li>
                     <li class="onhover-dropdown">
-                        <div class="media align-items-center"><img class="align-self-center pull-right img-50 rounded-circle blur-up lazyloaded" src="../assets/images/dashboard/man.png" alt="header-user">
+                        <div class="media align-items-center">
+                            {{-- <img class="align-self-center pull-right img-50 rounded-circle blur-up lazyloaded" src="../assets/images/dashboard/man.png" alt="header-user"> --}}
+                            {{Auth::user()->name}}
                             <div class="dotted-animation"><span class="animate-circle"></span><span class="main-circle"></span></div>
                         </div>
                         <ul class="profile-dropdown onhover-show-div p-20 profile-dropdown-hover">
@@ -100,21 +63,24 @@
         <div class="page-sidebar">
             <div class="sidebar custom-scrollbar">
                 <div class="sidebar-user text-center">
-                    <div><img class="img-60 rounded-circle lazyloaded blur-up" src="../assets/images/dashboard/man.png" alt="#">
+                    <div>
                     </div>
                     <h6 class="mt-3 f-14">{{Auth::user()->name}}</h6>
                     <p>Backend web Developer</p>
                 </div>
                 <ul class="sidebar-menu">
-                    <li><a class="sidebar-header" href="{{route('Dashboard.index')}}"><i data-feather="home"></i><span>Dashboard</span></a></li>
+                    <li><a class="sidebar-header" href="{{route('Dashboard.index')}}"><i class="fa fa-tachometer" aria-hidden="true"></i>
+                        <span>Dashboard</span></a></li>
 
-                    <li><a class="sidebar-header" href="{{route('sliders.index')}}"><i data-feather="archive"></i><span>Sliders</span></a>
-                    <li><a class="sidebar-header" href="{{route('service-categories.index')}}"><i data-feather="archive"></i><span>Service Category</span></a>
-                    <li><a class="sidebar-header" href="{{route('service.index')}}"><i data-feather="archive"></i><span>Service</span></a>
-                    <li><a class="sidebar-header" href="{{route('about.index')}}"><i data-feather="archive"></i><span>About</span></a>
-                    <li><a class="sidebar-header" href="{{route('reason.index')}}"><i data-feather="archive"></i><span>Reason</span></a>
-                    <li><a class="sidebar-header" href="{{route('message.index')}}"><i data-feather="archive"></i><span>Message</span></a>
-                    <li><a class="sidebar-header" href="{{route('testimonial.index')}}"><i data-feather="archive"></i><span>Testimonial</span></a>
+                    <li><a class="sidebar-header" href="{{route('sliders.index')}}"><i class="fa fa-sliders" aria-hidden="true"></i>
+                        <span>Sliders</span></a>
+                    <li><a class="sidebar-header" href="{{route('service-categories.index')}}"><i class="fa fa-sliders"></i>
+                        <span>Service Category</span></a>
+                    <li><a class="sidebar-header" href="{{route('service.index')}}"><i class="fa fa-sliders"></i><span>Service</span></a>
+                    <li><a class="sidebar-header" href="{{route('about.index')}}"><i class="fa fa-sliders"></i><span>About</span></a>
+                    <li><a class="sidebar-header" href="{{route('reason.index')}}"><i class="fa fa-sliders"></i><span>Reason</span></a>
+                    <li><a class="sidebar-header" href="{{route('message.index')}}"><i class="fa fa-sliders"></i><span>Message</span></a>
+                    <li><a class="sidebar-header" href="{{route('testimonial.index')}}"><i class="fa fa-sliders"></i><span>Testimonial</span></a>
 
                 </ul>
             </div>
@@ -205,7 +171,7 @@
                         <div class="col-lg-6">
                             <div class="page-header-left">
                                 <h3>Dashboard
-                                    <small>Bigdeal Admin panel</small>
+                                    <small> Admin panel</small>
                                 </h3>
                             </div>
                         </div>

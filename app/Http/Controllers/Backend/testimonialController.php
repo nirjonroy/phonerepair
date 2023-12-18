@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Testimonial;
 use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class testimonialController extends Controller
 {
@@ -49,6 +50,8 @@ class testimonialController extends Controller
             'message' => $request->input('message'),
 
         ]);
+
+        Alert::success('Success Title', 'Success Message');
 
         return redirect()->route('testimonial.index')->with('success', 'Slider created successfully');
     }
@@ -128,7 +131,7 @@ class testimonialController extends Controller
     public function destroy(Reason $reason)
     {
         $reason->delete();
-
+        
         return redirect()->route('reason.index')
             ->with('success', 'Slider deleted successfully');
     }
