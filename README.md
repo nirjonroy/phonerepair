@@ -8,13 +8,17 @@ This site is for Mobile repair appoinment
 after appoinment : 
 user will got a mail same to admin all got a mail. 
 and after login as an admin will able to see:
- total order ,
- order management
-user management ,
-service management,
-category,
-sub category,
-child category, 
-website management,
-SEO keyword management
-Slider add
+<ul>
+    <li> total order  </li>
+    <li> order management </li>
+    <li> user management </li>
+    <li>service management</li>
+    <li>category  </li>
+    <li>sub category </li>
+    <li> child category </li>
+    <li> website management</li>
+    <li> SEO keyword management </li>
+    <li> </li>
+</ul>
+
+
